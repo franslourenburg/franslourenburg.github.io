@@ -113,17 +113,25 @@ footer{
 @media (max-width: 768px) {
 
     .hero{
-        height:70vh;
-        min-height:400px;
-        background-position:30% center;
+        background:
+            linear-gradient(
+                rgba(0,0,0,.25),
+                rgba(0,0,0,.35)
+            ),
+            url("header-mobile.jpeg");
+
+        background-size: cover;
+        background-position: center center;
+        height: 75vh;
+        min-height: 500px;
     }
 
     .hero h1{
-        font-size:3rem;
+        font-size: 3rem;
     }
 
     .hero p{
-        font-size:1.1rem;
+        font-size: 1.2rem;
     }
 }
 </style>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
@@ -6,59 +7,187 @@
 <title>Familie Lourenburg</title>
 
 <style>
-body{
+:root{
+    --accent:#355c7d;
+    --light:#f7f7f7;
+    --text:#333;
+}
+
+*{
     margin:0;
-    font-family:Arial,sans-serif;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    color:var(--text);
+    line-height:1.7;
+    background:#fff;
 }
 
 .hero{
-    height:100vh;
+    height:65vh;
+    min-height:450px;
     background:
-      linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
-      url('header.jpeg');
+        linear-gradient(
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.35)
+        ),
+        url("header.jpeg");
     background-size:cover;
-    background-position:center;
+    background-position:center top;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     text-align:center;
     color:white;
 }
 
+.hero-content{
+    padding:20px;
+}
+
 .hero h1{
-    font-size:4rem;
+    font-size:clamp(2.5rem,6vw,4.5rem);
     margin-bottom:10px;
+    text-shadow:0 2px 10px rgba(0,0,0,.4);
 }
 
 .hero p{
-    font-size:1.5rem;
+    font-size:1.3rem;
+    text-shadow:0 2px 10px rgba(0,0,0,.4);
 }
 
-.content{
-    max-width:900px;
+.container{
+    max-width:1000px;
     margin:auto;
-    padding:50px 20px;
+    padding:60px 25px;
+}
+
+section{
+    margin-bottom:60px;
+}
+
+h2{
+    color:var(--accent);
+    margin-bottom:20px;
+}
+
+.intro{
+    font-size:1.1rem;
+}
+
+.family{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin-top:25px;
+}
+
+.member{
+    background:var(--light);
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.member h3{
+    color:var(--accent);
+}
+
+.quote{
+    background:#f3f5f7;
+    padding:30px;
+    border-left:5px solid var(--accent);
+    border-radius:10px;
+    font-style:italic;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#f7f7f7;
+    color:#666;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="hero">
-    <div>
+<header class="hero">
+    <div class="hero-content">
         <h1>Familie Lourenburg</h1>
         <p>Samen onderweg, thuis op het web</p>
     </div>
-</div>
+</header>
 
-<div class="content">
+<div class="container">
+
+<section>
     <h2>Welkom</h2>
 
-    <p>
-        Welkom op de website van de familie Lourenburg.
-        Deze website wordt de komende tijd verder uitgebreid.
-    </p>
+```
+<p class="intro">
+    Welkom op onze familiepagina. Deze website is een persoonlijke plek
+    waar we foto's, herinneringen en verhalen verzamelen. Een eigen
+    stukje internet voor familie, vrienden en iedereen die geïnteresseerd
+    is in de naam Lourenburg.
+</p>
+```
+
+</section>
+
+<section>
+    <h2>Ons gezin</h2>
+
+```
+<div class="family">
+    <div class="member">
+        <h3>Frans</h3>
+    </div>
+
+    <div class="member">
+        <h3>Morena</h3>
+    </div>
+
+    <div class="member">
+        <h3>Jill</h3>
+    </div>
+
+    <div class="member">
+        <h3>Jessie</h3>
+    </div>
 </div>
+```
+
+</section>
+
+<section>
+    <div class="quote">
+        "Familie is niet alleen waar je vandaan komt,
+        maar vooral met wie je het leven deelt."
+    </div>
+</section>
+
+<section>
+    <h2>In ontwikkeling</h2>
+
+```
+<p>
+    Deze website wordt stap voor stap uitgebreid met foto's,
+    verhalen, herinneringen en wellicht ook wat familiegeschiedenis.
+</p>
+```
+
+</section>
+
+</div>
+
+<footer>
+    © Familie Lourenburg
+</footer>
 
 </body>
 </html>
